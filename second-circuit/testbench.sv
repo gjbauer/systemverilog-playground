@@ -5,7 +5,7 @@ module tb_adder;
 	logic [7:0] tb_sum;
 	logic tb_cout;
 
-	adder dut_inst (
+	adder adder_inst (
 		.A(tb_a),
 		.B(tb_b),
 		.Sum(tb_sum),
