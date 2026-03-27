@@ -2,7 +2,7 @@
 all: test run
 
 test:
-	iverilog -g2012 -o test.vvp test.sv
+	iverilog -g2012 -o test.vvp test.sv testbench.sv
 
 run:
 	vvp test.vvp
