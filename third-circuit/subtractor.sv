@@ -10,8 +10,6 @@ module subtractor(
 
 	assign B_complement = ~B;
 	
-	logic [7:0] one_holder = 8'd1;
-
 	adder complement_adder(
 		.A(8'd1),
 		.B(B_complement),
