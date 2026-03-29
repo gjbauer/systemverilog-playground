@@ -11,6 +11,6 @@ run:
 	vvp test.vvp
 
 clean:
-	rm test.vvp
+	rm test.vvp dump.vcd
 
 .PHONY: clean
