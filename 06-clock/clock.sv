@@ -3,7 +3,8 @@ module clock(
 	);
 
 	initial begin
-		assign clock = 0;
-		forever #5 clock = ~clock;
+		clock = 0;
 	end
+
+	always #5 clock = ~clock;
 endmodule
