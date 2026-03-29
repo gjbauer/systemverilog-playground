@@ -5,23 +5,34 @@ module subtractor(
 	output logic Cout
 );
 
-	logic [7:0] B_complement;
-	logic [7:0] twos_complement;
+	logic [7:0] SA;
+	logic [7:0] SB;
+	Logic [7:0] SOut;
+	//logic [7:0] B_complement;
+	//logic [7:0] twos_complement;
 
-	assign B_complement = ~B;
+	assign SA = 8'd1;
+	assign SB = ~B;
 	
-	adder complement_adder(
-		.A(8'd1),
-		.B(B_complement),
-		.Sum(twos_complement),
-		.Cout()
-	);
+	//adder complement_adder(
+	//	.A(8'd1),
+	//	.B(B_complement),
+	//	.Sum(twos_complement),
+	//	.Cout()
+	//);
 	
-	adder main_adder(
-		.A(A),
-		.B(twos_complement),
-		.Sum(Dif),
+	adder mod_adder(
+		.A(SA),
+		.B(SB),
+		.Sum(SOut),
 		.Cout(Cout)
 		);
 
+	#5;
+
+	assign SB = Sout;
+	assign SA = A;
+
+	#5;
+	assign Dif = Sout;
 endmodule
